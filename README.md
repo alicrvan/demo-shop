@@ -1,5 +1,5 @@
 # demo-shop
-An e-commerce shop project to demonstrate my skills. The project's architecture is based on microservices. Below are the key components of the project:
+An e-commerce shop project to demonstrate my skills. The project's architecture is based on microservices using Spring Boot. Below are the key components of the project:
 
 1. **Product Management Microservice**
    - Responsible for managing products including adding, updating, deleting, and retrieving product information (**JOSN/Validation/CRUD Operations**).
