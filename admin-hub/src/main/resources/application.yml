@@ -1,2 +1,5 @@
 server:
   port: 9001
+
+product-endpoint: /products
+product-url: http://localhost:8080

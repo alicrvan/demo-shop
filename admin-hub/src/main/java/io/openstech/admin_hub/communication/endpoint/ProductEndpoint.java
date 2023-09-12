@@ -1,14 +1,14 @@
 package io.openstech.admin_hub.communication.endpoint;
 
-import io.openstech.admin_hub.communication.ProductController;
-import io.openstech.admin_hub.persistence.domain.ProductDTO;
+import io.openstech.admin_hub.communication.client.ProductController;
+import io.openstech.admin_hub.domain.ProductDTO;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
 
 @RestController
-@RequestMapping("/dashboard")
+@RequestMapping("/dashboard/product-management")
 public class ProductEndpoint {
 
     private final ProductController productController;
@@ -25,10 +25,13 @@ public class ProductEndpoint {
         return productController.getTrending(page,size);
     }
 
+
+
     @GetMapping("/{productNumber}")
     public ProductDTO findProduct(@PathVariable String productNumber) {
         return productController.searchProduct( productNumber);
     }
+
 
 
 
