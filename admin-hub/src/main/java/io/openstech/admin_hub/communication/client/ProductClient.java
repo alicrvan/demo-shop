@@ -10,14 +10,14 @@ import java.util.List;
 
 
 @Controller
-public class ProductController {
+public class ProductClient {
 
     private final WebClient webClient;
 
 
     final String productEndpoint;
 
-    public ProductController(WebClient webClient,  @Value("${product-endpoint}") String productEndpoint) {
+    public ProductClient(WebClient webClient, @Value("${product-endpoint}") String productEndpoint) {
         this.webClient = webClient;
         this.productEndpoint = productEndpoint;
     }
