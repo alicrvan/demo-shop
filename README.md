@@ -10,7 +10,7 @@ An e-commerce shop project to demonstrate my skills. The project's architecture 
    - Handles user-related functionality including user registration, authentication, and user profile management.
    - Maintains a dedicated database for storing user data securely (**NoSQL/MongoDB**).
 
-3. **Management Portal**
+3. **Admin hub**
    - A web-based portal designed for employees and administrators.
    - Authorized users can access administrative functions, such as managing products, orders, and users.
 
