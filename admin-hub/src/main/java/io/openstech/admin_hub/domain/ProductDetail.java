@@ -1,4 +1,4 @@
-package io.openstech.admin_hub.persistence.domain;
+package io.openstech.admin_hub.domain;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;

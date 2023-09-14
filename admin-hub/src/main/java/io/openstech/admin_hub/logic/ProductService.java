@@ -1,20 +1,17 @@
 package io.openstech.admin_hub.logic;
 
-import io.openstech.admin_hub.communication.ProductController;
-import io.openstech.admin_hub.persistence.domain.ProductDTO;
+import io.openstech.admin_hub.communication.client.ProductClient;
 import org.springframework.stereotype.Service;
-
-import java.util.List;
 
 
 @Service
 public class ProductService {
 
-private final ProductController productController;
+private final ProductClient productClient;
 
-
-    public ProductService(ProductController productController) {
-        this.productController = productController;
+//TODO make some method to apply discount
+    public ProductService(ProductClient productClient) {
+        this.productClient = productClient;
     }
 
 //
