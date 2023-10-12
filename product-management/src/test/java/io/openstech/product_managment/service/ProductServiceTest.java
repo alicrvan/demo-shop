@@ -103,7 +103,7 @@ class ProductServiceTest {
 
         Mockito.when(productDTOMapper.toProduct(productDTO)).thenReturn(product);
 
-        Mockito.when(productRepository.existsByTitleOrProductDetailNameOrProductDetailModel(anyString(), anyString(), anyString())).thenReturn(false);
+        Mockito.when(productRepository.existsByTitleOrNameOrModel(anyString(), anyString(), anyString())).thenReturn(false);
 
         Mockito.when(productRepository.existsByProductNumber(productNum)).thenReturn(false);
 
@@ -115,7 +115,7 @@ class ProductServiceTest {
         assertEquals(productDTOWithNum, result);
 
 
-        Mockito.verify(productRepository).existsByTitleOrProductDetailNameOrProductDetailModel("mockTitle", "rx 480", "navi 11");
+        Mockito.verify(productRepository).existsByTitleOrNameOrModel("mockTitle", "rx 480", "navi 11");
 
         Mockito.verify(productDTOMapper).toProduct(productDTO);
         Mockito.verify(productDTOMapper).toProductDto(product);
@@ -127,12 +127,12 @@ class ProductServiceTest {
     @Test
     void insertProductExist() {
 
-        Mockito.when(productRepository.existsByTitleOrProductDetailNameOrProductDetailModel("mockTitle", "rx 480", "navi 11")).thenReturn(true);
+        Mockito.when(productRepository.existsByTitleOrNameOrModel("mockTitle", "rx 480", "navi 11")).thenReturn(true);
 
 
         assertThrows(ProductAlreadyExistException.class, () -> productService.insertProduct(productDTO));
 
-        Mockito.verify(productRepository).existsByTitleOrProductDetailNameOrProductDetailModel("mockTitle", "rx 480", "navi 11");
+        Mockito.verify(productRepository).existsByTitleOrNameOrModel("mockTitle", "rx 480", "navi 11");
 
     }
 

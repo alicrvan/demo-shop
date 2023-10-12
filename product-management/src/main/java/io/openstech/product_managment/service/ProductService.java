@@ -121,7 +121,7 @@ public class ProductService {
         String name = productDTO.getDetails().getName();
         String model = productDTO.getDetails().getModel();
 
-        return productRepository.existsByTitleOrProductDetailNameOrProductDetailModel(title, name, model);
+        return productRepository.existsByTitleOrNameOrModel(title, name, model);
     }
 
     private String generateUniqueProductNumber() {
