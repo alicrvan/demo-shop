@@ -20,7 +20,7 @@ public class ProductEndpoint {
 
 
     @GetMapping
-    public List<ProductDTO> getAllProduct(
+    public List<ProductDTO> getAllProducts(
             @RequestParam(name = "page", defaultValue = "0") int page,
             @RequestParam(name = "size", defaultValue = "10") int size) {
         return productService.returnAllProduct(page,size);
@@ -38,7 +38,7 @@ public class ProductEndpoint {
 
 
     @PutMapping("/{productNumber}")
-    public ProductDTO editProduct(@PathVariable String productNumber, @RequestBody @Valid ProductDTO productDTO) {
+    public ProductDTO updateProduct(@PathVariable String productNumber, @RequestBody @Valid ProductDTO productDTO) {
         return productService.modifyProduct(productNumber, productDTO);
     }
 
